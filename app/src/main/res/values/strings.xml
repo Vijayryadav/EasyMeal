@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">EasyMeal</string>
     <string name="welocme">Welcome</string>
+    <string name="input_number">To receive a one-time password, enter your mobile number</string>
+    <string name="enter_otp_info">Enter OTP received on your phone number</string>
+    <string name="otp_sent_info">Didn\'t\ Receive\,\ </string>
+    <string name="resend_text">Resend</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

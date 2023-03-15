@@ -1,10 +1,17 @@
 plugins {
     id 'com.android.application'
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
+
 }
 
 android {
     namespace 'com.example.easymeal'
     compileSdk 33
+
+    buildFeatures {
+        viewBinding true
+    }
 
     defaultConfig {
         applicationId "com.example.easymeal"
@@ -31,8 +38,41 @@ android {
 dependencies {
 
     implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.google.firebase:firebase-auth:21.0.3'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.hbb20:ccp:2.5.3'
+    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
+
+
+    // OTP Layout
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+    // Firebase
+    implementation'com.google.firebase:firebase-bom:31.2.3'
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics'
+
+
+    // FirebaseUI for Firebase Realtime Database
+    implementation 'com.firebaseui:firebase-ui-database:8.0.2'
+
+    // FirebaseUI for Cloud Firestore
+    implementation 'com.firebaseui:firebase-ui-firestore:8.0.2'
+
+    // FirebaseUI for Firebase Auth
+    implementation "com.google.firebase:firebase-auth:9.6.1"
+
+
+    // FirebaseUI for Cloud Storage
+    implementation 'com.google.firebase:firebase-database:9.6.1'
+
+
+
+
 }

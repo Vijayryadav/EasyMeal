@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_detail">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@color/white"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userdetail_textview_header"
+            android:layout_marginTop="20dp"
+            android:text="Please enter your detail to register on the app"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userdetail_textview_fullname"
+            android:layout_below="@id/userdetail_textview_header"
+            android:layout_marginTop="50dp"
+            android:text="Full Name"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/userdetail_edittext_fullname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/userdetail_textview_fullname"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:digits=" A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z"
+            android:padding="6dp"
+            android:hint="Enter Your Full Name"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userdetail_textview_email"
+            android:layout_below="@id/userdetail_edittext_fullname"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/userdetail_edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/userdetail_textview_email"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:hint="Enter Your Email"
+            android:textSize="16sp" />
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userdetail_textview_password"
+            android:layout_below="@id/userdetail_edittext_email"
+            android:layout_marginTop="10dp"
+            android:text="Password"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/userdetail_edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/userdetail_textview_password"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:hint="Enter Your Password"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userdetail_textview_confirmpassword"
+            android:layout_below="@id/userdetail_edittext_password"
+            android:layout_marginTop="10dp"
+            android:text="Confirm Password"
+            android:textSize="16sp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:id="@+id/userdetail_edittext_confirmpassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/userdetail_textview_confirmpassword"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:hint="Enter Your Confirm Password"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/validation_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userdetail_edittext_confirmpassword"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="5dp"
+            android:text="• Password must be at least 8 characters long\n\n• Password must contain at least one alphabet\n\n• Password must contain at least one number\n\n• Password must contain at least one special character"
+
+
+            />
+
+        <Button
+            android:id="@+id/next_button_register"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/validation_textview"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_rounds"
+            android:elevation="5dp"
+            android:fontFamily="@font/osr"
+            android:padding="10dp"
+            android:stateListAnimator="@null"
+            android:text="Register"
+            android:textStyle="bold"
+            android:translationZ="5dp" >
+
+        </Button>
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>
