@@ -37,10 +37,13 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.EmailAuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.hbb20.CountryCodePicker;
 
 import java.util.Objects;
@@ -56,6 +59,8 @@ public class SignUp extends AppCompatActivity {
     ImageView close_dialog, back_btn;
     ProgressBar progressBar;
     FirebaseAuth fauth;
+
+
     String phonenumber;
     PhoneAuthProvider.ForceResendingToken tok;
     String vid;
@@ -67,7 +72,9 @@ public class SignUp extends AppCompatActivity {
 
 
     private void setOnclicklistners(){
+
         InputMethodManager imm = (InputMethodManager) getApplicationContext().getSystemService(Context.INPUT_METHOD_SERVICE);
+
 
         otpDialog.setOnShowListener(dialogInterface -> {
 
@@ -79,6 +86,8 @@ public class SignUp extends AppCompatActivity {
         });
         binding.getOtpButton.setOnClickListener(view -> {
             phonenumber = binding.phoneInput.getText().toString();
+
+
             if (phonenumber.isEmpty())
                 Toast.makeText(getApplicationContext(), "Enter Phone Number", Toast.LENGTH_SHORT).show();
             else if (phonenumber.length() < 10) {
@@ -88,6 +97,10 @@ public class SignUp extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(), Integer.toString(10 - phonenumber.length()) + " digits are missing", Toast.LENGTH_SHORT).show();
             }else{
                 sendotp();
+
+
+
+
             }
         });
         close_dialog.setOnClickListener(view -> {
@@ -101,9 +114,12 @@ public class SignUp extends AppCompatActivity {
 
             fauth.signInWithCredential(credential).addOnCompleteListener(task -> {
                 if(task.isSuccessful()){
+                  //  Toast.makeText(this, "Otp Success", Toast.LENGTH_LONG).show();
+                    Intent intent = new Intent(getApplicationContext(),UserDetail.class);
+                    intent.putExtra("Phone Number",phonenumber);
+                    startActivity(intent);
 
-                    Toast.makeText(this, "Otp Success", Toast.LENGTH_LONG).show();
-                    startActivity(new Intent(getApplicationContext(),UserDetail.class));
+
                    finish();
                 }else
                     Toast.makeText(getApplicationContext(),"Failed to login" , Toast.LENGTH_SHORT).show();
@@ -125,7 +141,9 @@ public class SignUp extends AppCompatActivity {
 
 
 
+
         binding.getOtpButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View view) {
 

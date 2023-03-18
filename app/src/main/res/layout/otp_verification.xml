@@ -87,9 +87,9 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:background="@drawable/verification_button_bg"
-        android:text="Verify and register"
+        android:text="Next"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:layout_gravity="center"
         android:layout_margin="20dp"/>
 
