@@ -6,7 +6,7 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-
+    <color name="gray">#424242</color>
     <color name="palette_black">#1A1A1B</color>
     <color name="palette_grey">#333F44</color>
     <color name="palette_teal">#37AA9C</color>
@@ -16,4 +16,8 @@
     <color name="_onboard">#37AA9C</color>
     <color name="palette_light_teal">#94F3E4</color>
     <color name="text_grey">#808080</color>
+    <color name="secondary">#FF03DAC5</color>
+    <color name="primary">#1B023B</color>
+    <color name="night_mode">#6124B1</color>
+    <color name="security">#D95F69</color>
 </resources>

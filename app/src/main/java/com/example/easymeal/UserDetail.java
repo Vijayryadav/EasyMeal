@@ -124,6 +124,7 @@ public class UserDetail extends AppCompatActivity {
         Map<String, Object> user = new HashMap<>();
         user.put("username", binding.FullName.getText().toString());
         user.put("phone", getIntent().getStringExtra("Phone Number"));
+        user.put("email", binding.Email.getText().toString());
         user.put("password", binding.Password.getText().toString());
         user.put("house",binding.House.getText().toString());
         user.put("area",binding.Area.getText().toString());
