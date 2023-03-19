@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.easymeal.databinding.ActivityHomeBinding;
+import android.view.View;
+
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -58,6 +60,7 @@ public class Home extends AppCompatActivity {
                     }
                 }
                 return false;
+
             }
         });
 
