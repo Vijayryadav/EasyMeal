@@ -16,12 +16,17 @@ public class Tiffin_detail extends AppCompatActivity {
         Intent intent = getIntent();
         String tiffinCenterName = intent.getStringExtra("tiffin_center_name");
         String tiffinCenterAddress = intent.getStringExtra("tiffin_center_address");
-        float tiffinCenterPrice = intent.getIntExtra("tiffin_center_price", 0);
+        String tiffinCenterPrice = "" +
+                "" +
+                "" +
+                "" +
+                "" +
+                "Pricing starts from "+ String.valueOf(intent.getIntExtra("tiffin_center_price",60));
 
         // Do something with the retrieved extras
         TextView nameTextView = findViewById(R.id.tiffin_center_name);
         TextView addressTextView = findViewById(R.id.tiffin_center_address);
-        TextView priceTextView = findViewById(R.id.tiffin_center_rating);
+        TextView priceTextView = findViewById(R.id.tiffin_center_pricing);
 
         nameTextView.setText(tiffinCenterName);
         addressTextView.setText(tiffinCenterAddress);
@@ -30,6 +35,9 @@ public class Tiffin_detail extends AppCompatActivity {
         findViewById(R.id.add_to_cart_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Intent intent= new Intent(Tiffin_detail.this,CurrentAddress.class);
+                startActivity(intent);
 
             }
         });

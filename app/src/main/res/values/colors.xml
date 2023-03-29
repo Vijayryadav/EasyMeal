@@ -20,4 +20,6 @@
     <color name="primary">#1B023B</color>
     <color name="night_mode">#6124B1</color>
     <color name="security">#D95F69</color>
+    <color name="blue_grey">#ECEFF1</color>
+    <color name="tansparent">#00000000</color>
 </resources>

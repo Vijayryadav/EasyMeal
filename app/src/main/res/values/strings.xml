@@ -11,4 +11,7 @@
     <string name="settings">Settings</string>
     <string name="carts">carts</string>
     <string name="search_restaurants">Search </string>
+    <string name="choose_your_payment_method">Choose Your Payment Method</string>
+    <string name="write_a_review">Write a review</string>
+
 </resources>

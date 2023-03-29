@@ -29,6 +29,7 @@ public class Discover extends Fragment {
 
         // Putting Data in Array
         ArrayList<TiffinCenter> projects =  new ArrayList<>();
+        projects.add(new TiffinCenter("New Tiffin Center","Jain Nagar","Pricing starts from Rs100", R.drawable.tiffincenter));
         projects.add(new TiffinCenter("Shudh Tiffin Center","Housing Board","Pricing starts from Rs50", R.drawable.tiffincenter));
         projects.add(new TiffinCenter("Sunny's Kitchen","Adarsh Nagar","Pricing starts from Rs70", R.drawable.tiffincenter));
         projects.add(new TiffinCenter("Mahakal Tiffin Center","Bhawani dham", "Pricing starts Rs50", R.drawable.ic_launcher_background));
@@ -39,7 +40,6 @@ public class Discover extends Fragment {
         projects.add(new TiffinCenter("Yadav JI ka Tiffin Box","Gandhinagar", "Pricing starts Rs75", R.drawable.ic_launcher_background));
         projects.add(new TiffinCenter("Sanjeev Tiffin Services","Gandhinagar", "Pricing starts Rs65", R.drawable.ic_launcher_background));
         projects.add(new TiffinCenter("Raj darbar","GandhiNagar", "Pricing starts from Rs50", R.drawable.ic_launcher_background));
-
 
         TiffinCenterAdapter adapter= new TiffinCenterAdapter(projects,getActivity().getApplicationContext());
         list.setAdapter(adapter);

@@ -10,9 +10,10 @@
     <ImageView
         android:id="@+id/tiffin_center_image"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/tiffincenter" />
+        android:src="@drawable/tiffincenter"
+        android:layout_margin="10dp"/>
 
     <TextView
         android:id="@+id/tiffin_center_name"
@@ -20,49 +21,64 @@
         android:layout_height="wrap_content"
         android:text="Tiffin Center Name"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        />
 
+    <TextView
+        android:id="@+id/tiffin_center_pricing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pricing -"
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
     <TextView
         android:id="@+id/tiffin_center_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Tiffin Center Address"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
 
     <TextView
         android:id="@+id/tiffin_center_opening_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Opening Time: 9am-10pm"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
 
     <TextView
         android:id="@+id/tiffin_center_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rating: 4.5"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
 
     <TextView
         android:id="@+id/tiffin_center_veg_non_veg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Veg"
-        android:textSize="16sp" />
+        android:text="Veg/Nov Veg -  Veg"
+        android:textSize="16sp"
+        android:layout_margin="5dp"/>
 
     <TextView
         android:id="@+id/tiffin_center_meals_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Full Meal Thali"
+        android:text="Full Meal Thali Available"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_margin="5dp"/>
 
     <LinearLayout
         android:id="@+id/tiffin_center_meals_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:orientation="vertical"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/add_to_cart_button"
